@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: relative;
+  font-family: "Rubik";
+  background: hsl(270, 20%, 96%);
+}
+
+.bg-image {
+  z-index: -1;
+  left: -50%;
+  position: absolute;
+  top: 0.1px;
+  background: rgb(136, 56, 255);
+  background: linear-gradient(0deg, rgb(136, 56, 255) 11%, rgb(162, 59, 255) 62%, rgb(207, 63, 255) 100%, rgb(233, 66, 255) 100%);
+  width: 100%;
+  height: 50vh;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+
+main {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+}
+main section {
+  margin: 3rem auto;
+}
+main section .phone {
+  background: #fff;
+  margin: 0 15%;
+  padding: 0.7rem 0.5rem;
+  border-radius: 25px;
+}
+main section .phone .content-header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background: rgb(136, 56, 255);
+  background: linear-gradient(90deg, rgb(136, 56, 255) 0%, rgb(233, 66, 255) 100%);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+main section .phone .content-header .camera-placeholder {
+  background: #fff;
+  width: 65%;
+  height: 20px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+main section .phone .content-header .header-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+}
+main section .phone .content-header .header-details .user {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  width: 90%;
+}
+main section .phone .content-header .header-details .user img {
+  width: 10%;
+  border-radius: 50%;
+  border: 1.6px solid #fff;
+}
+main section .phone .content-header .header-details .user .name {
+  display: flex;
+  flex-flow: column wrap;
+  margin-left: 10px;
+}
+main section .phone .content-header .header-details .user .name h5 {
+  font-size: 0.8em;
+}
+main section .phone .content-header .header-details .user .name span {
+  color: hsl(276, 100%, 81%);
+  font-size: 0.6em;
+}
+main section .phone .content-header .header-details .arrow-back {
+  position: relative;
+}
+main section .phone .content-header .header-details .arrow-back .upper {
+  width: 2px;
+  height: 5px;
+  background: #fff;
+  transform: rotate(30deg);
+}
+main section .phone .content-header .header-details .arrow-back .lower {
+  width: 2px;
+  height: 5px;
+  background: #fff;
+  transform: rotate(-30deg);
+}
+main section .phone .content-header .header-details .setting-dots .dot {
+  margin: 1px 0;
+  height: 2px;
+  width: 2px;
+  border-radius: 2px;
+  background: #fff;
+}
+main section .phone .content {
+  padding: 1rem;
+  background: hsl(270, 20%, 96%);
+}
+main section .phone .content .left-message .left {
+  border-radius: 12px;
+  border-bottom-left-radius: 5px;
+  padding: 0.5rem;
+  background: rgba(216, 158, 255, 0.2);
+  font-size: 0.5em;
+  width: 55%;
+  color: hsl(276, 55%, 52%);
+  margin-bottom: 0.5rem;
+}
+main article {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+main article h1 {
+  color: hsl(271, 36%, 24%);
+  font-size: 2.5em;
+}
+main article p {
+  text-align: center;
+  margin: 1rem 2rem;
+  color: hsl(270, 7%, 64%);
+}/*# sourceMappingURL=styles.css.map */
