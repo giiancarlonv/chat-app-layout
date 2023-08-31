@@ -48,10 +48,10 @@ main section .phone .content-header {
 }
 main section .phone .content-header .camera-placeholder {
   background: #fff;
-  width: 65%;
+  width: 60%;
   height: 20px;
-  border-bottom-left-radius: 25px;
-  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
 main section .phone .content-header .header-details {
   display: flex;
@@ -82,20 +82,14 @@ main section .phone .content-header .header-details .user .name span {
   color: hsl(276, 100%, 81%);
   font-size: 0.6em;
 }
-main section .phone .content-header .header-details .arrow-back {
-  position: relative;
+main section .phone .content-header .header-details .arrow {
+  border: solid #fff;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
 }
-main section .phone .content-header .header-details .arrow-back .upper {
-  width: 2px;
-  height: 5px;
-  background: #fff;
-  transform: rotate(30deg);
-}
-main section .phone .content-header .header-details .arrow-back .lower {
-  width: 2px;
-  height: 5px;
-  background: #fff;
-  transform: rotate(-30deg);
+main section .phone .content-header .header-details .left {
+  transform: rotate(135deg);
 }
 main section .phone .content-header .header-details .setting-dots .dot {
   margin: 1px 0;
@@ -105,18 +99,115 @@ main section .phone .content-header .header-details .setting-dots .dot {
   background: #fff;
 }
 main section .phone .content {
-  padding: 1rem;
+  padding: 1rem 0.5rem;
   background: hsl(270, 20%, 96%);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
-main section .phone .content .left-message .left {
+main section .phone .content .left-message-container {
+  display: flex;
+  flex-flow: column wrap;
+}
+main section .phone .content .left-message-container .left-message {
+  width: 55%;
+}
+main section .phone .content .left-message-container .left-message .left {
   border-radius: 12px;
   border-bottom-left-radius: 5px;
   padding: 0.5rem;
   background: rgba(216, 158, 255, 0.2);
   font-size: 0.5em;
-  width: 55%;
+  width: -moz-fit-content;
+  width: fit-content;
   color: hsl(276, 55%, 52%);
   margin-bottom: 0.5rem;
+}
+main section .phone .content .left-message-container .attached .radio {
+  border-radius: 12px;
+  border-bottom-left-radius: 5px;
+  padding: 0.7rem 0.5rem;
+  width: 65%;
+  background: rgb(136, 56, 255);
+  background: linear-gradient(-90deg, rgb(136, 56, 255) 0%, rgb(233, 66, 255) 100%);
+  color: #fff;
+  align-items: center;
+  display: grid;
+  grid-template-columns: 1rem 5.6rem 0.5rem;
+  gap: 5px;
+  margin-bottom: 0.5rem;
+}
+main section .phone .content .left-message-container .attached .radio span {
+  font-size: 0.5em;
+  color: rgba(255, 255, 255, 0.7);
+}
+main section .phone .content .left-message-container .attached .radio h5 {
+  font-size: 0.7em;
+}
+main section .phone .content .right-message-container {
+  margin: 0.5rem 0 0;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+main section .phone .content .right-message-container .right-message {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 55%;
+}
+main section .phone .content .right-message-container .right-message .image {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+main section .phone .content .right-message-container .right-message .image img {
+  width: 100%;
+  border-radius: 10px;
+}
+main section .phone .content .right-message-container .right-message .right {
+  border-radius: 12px;
+  border-bottom-right-radius: 5px;
+  padding: 0.5rem;
+  background: #fff;
+  color: hsl(271, 15%, 43%);
+  font-size: 0.5em;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-bottom: 0.5rem;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+main section .phone .content .send-message {
+  background: #fff;
+  margin: 1rem 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.3rem 0.3rem;
+  border-radius: 20px;
+}
+main section .phone .content .send-message input {
+  border: none;
+  padding: 0 0.5rem;
+  color: hsl(206, 6%, 79%);
+  font-size: 0.6em;
+}
+main section .phone .content .send-message button {
+  padding: 0.3rem 0.5rem;
+  border-radius: 50%;
+  border: none;
+  background: hsl(271, 36%, 24%);
+}
+main section .phone .content .send-message button .arrow {
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+}
+main section .phone .content .send-message button .right {
+  transform: rotate(-45deg);
 }
 main article {
   display: flex;
@@ -131,4 +222,55 @@ main article p {
   text-align: center;
   margin: 1rem 2rem;
   color: hsl(270, 7%, 64%);
+}
+
+@media (min-width: 800px) {
+  main {
+    padding: 0 25%;
+  }
+}
+@media (min-width: 1280px) {
+  body {
+    overflow-y: hidden;
+  }
+  main {
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    padding: 10% 15%;
+  }
+  main section {
+    margin: 0 9%;
+  }
+  main section .phone {
+    box-shadow: 0 5px 2rem rgba(0, 0, 0, 0.2);
+  }
+  main article {
+    align-items: flex-start;
+  }
+  main article h1 {
+    font-size: 2em;
+  }
+  main article p {
+    margin: 1rem 0;
+    text-align: left;
+    line-height: 1.5rem;
+  }
+  .bg-image {
+    height: 85vh;
+    width: 43%;
+    left: -16.5%;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+  }
+  .bg-image-desktop {
+    background: rgba(201, 201, 201, 0.1);
+    position: absolute;
+    height: 85vh;
+    width: 40%;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    z-index: -1;
+    top: 8rem;
+    right: -13rem;
+  }
 }/*# sourceMappingURL=styles.css.map */

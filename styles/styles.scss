@@ -41,10 +41,10 @@ main{
         border-bottom-left-radius: 5px;
         .camera-placeholder{
           background: #fff;
-          width: 65%;
+          width: 60%;
           height: 20px;
-          border-bottom-left-radius: 25px;
-          border-bottom-right-radius: 25px;
+          border-bottom-left-radius: 15px;
+          border-bottom-right-radius: 15px;
         }
         .header-details{
           display: flex;
@@ -75,21 +75,16 @@ main{
               }
             }
           }
-          .arrow-back{
-            position: relative;
-            .upper{
-              width: 2px;
-              height: 5px;
-              background: #fff;
-              transform: rotate(30deg)
-            }
-            .lower{
-              width: 2px;
-              height: 5px;
-              background: #fff;
-              transform: rotate(-30deg)
-            }
+          .arrow{
+            border: solid #fff;
+            border-width: 0 3px 3px 0;
+            display: inline-block;
+            padding: 3px;
           }
+          .left{
+            transform: rotate(135deg);
+           }
+                    
           .setting-dots{
             .dot{
               margin: 1px 0;
@@ -102,19 +97,114 @@ main{
         }
       }
       .content{
-        padding: 1rem;
+        padding: 1rem .5rem;
         background: hsl(270, 20%, 96%);
-        .left-message{
-          .left{
-            border-radius: 12px;
-            border-bottom-left-radius: 5px;
-            padding: .5rem;
-            background: rgba(216, 158, 255, .2);
-            font-size: .5em;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        .left-message-container{
+            display: flex;
+            flex-flow: column wrap;
+          .left-message{
             width: 55%;
-            color: hsl(276, 55%, 52%);
-            margin-bottom: .5rem;
-          }  
+            .left{
+              border-radius: 12px;
+              border-bottom-left-radius: 5px;
+              padding: .5rem;
+              background: rgba(216, 158, 255, .2);
+              font-size: .5em;
+              width: fit-content;
+              color: hsl(276, 55%, 52%);
+              margin-bottom: .5rem;
+            }  
+          }
+          .attached{
+            .radio{
+              border-radius: 12px;
+              border-bottom-left-radius: 5px;
+              padding: .7rem .5rem;
+              width: 65%;
+              background: rgb(136,56,255);
+              background: linear-gradient(-90deg, rgba(136,56,255,1) 0%, rgba(233,66,255,1) 100%); 
+              color: #fff;
+              align-items: center;
+              display: grid;
+              grid-template-columns: 1rem 5.6rem .5rem;
+              gap: 5px;
+              margin-bottom: .5rem;
+              span{
+                font-size: .5em;
+                color: rgba($color: #fff, $alpha: .7);
+              }
+              h5{
+                font-size: .7em;
+              }
+            }
+          }
+        }
+        .right-message-container{
+          margin: .5rem 0 0;
+          display: flex;
+          flex-flow: column wrap;
+          justify-content: flex-end;
+          align-items: flex-end;
+          .right-message{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-end;
+            width: 55%;
+            .image{
+              display: grid;
+              grid-template-columns: repeat(3, 1fr);
+              gap: .5rem;
+              margin-bottom: .5rem;
+              img{
+                width: 100%;
+                border-radius: 10px;
+              }
+            }
+            .right{
+              border-radius: 12px;
+              border-bottom-right-radius: 5px;
+              padding: .5rem;
+              background: #fff;
+              color: hsl(271, 15%, 43%);
+              font-size: .5em;
+              width: fit-content;
+              margin-bottom: .5rem;
+              box-shadow: 0 3px 5px rgba($color: #000000, $alpha: .1);
+            }
+          }
+        }
+        .send-message{
+          background: #fff;
+          margin: 1rem 0 0;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: .3rem .3rem;
+          border-radius: 20px;
+          input{
+            border: none;
+            padding: 0 .5rem;
+            color: hsl(206, 6%, 79%);
+            font-size: .6em;
+          }
+          button{
+            padding: .3rem .5rem;
+            border-radius: 50%;
+            border: none;
+            background: hsl(271, 36%, 24%);    
+            .arrow{
+              border: solid #fff;
+              border-width: 0 2px 2px 0;
+              display: inline-block;
+              padding: 3px;
+            }
+            .right{
+              transform: rotate(-45deg);
+            }
+          }
         }
       }
     }
@@ -132,5 +222,58 @@ main{
       margin: 1rem 2rem;
       color: hsl(270, 7%, 64%);
     }
+  }
+}
+
+@media (min-width: 800px) {
+  main{
+    padding: 0 25%;
+  }
+}
+@media (min-width: 1280px){
+  body{
+    overflow-y: hidden;
+  }
+  main{
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    padding: 10% 15%;
+    section{
+      margin: 0 9%;
+      .phone{
+        box-shadow: 0 5px 2rem rgba($color: #000000, $alpha: .2);
+      }
+      
+    }
+    article{
+      align-items: flex-start;
+      h1{
+        font-size: 2em;
+      }
+      p{
+        margin: 1rem 0;
+        text-align: left;
+        line-height: 1.5rem;
+      }
+    }
+  }
+  .bg-image{
+    height: 85vh;
+    width: 43%;
+    left: -16.5%;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    
+  }
+  .bg-image-desktop{
+    background: rgba($color: #c9c9c9, $alpha: .1);
+    position: absolute;
+    height: 85vh;
+    width: 40%;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    z-index: -1;
+    top: 8rem;
+    right: -13rem;
   }
 }

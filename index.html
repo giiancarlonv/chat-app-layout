@@ -17,10 +17,7 @@
         <div class="content-header">
           <div class="camera-placeholder"></div>
           <div class="header-details">
-            <div class="arrow-back">
-              <div class="upper"></div>
-              <div class="lower"></div>
-            </div>
+            <i class="arrow left"></i>
             <div class="user">
               <img src="./images/avatar.jpg" alt="">
               <div class="name">
@@ -36,30 +33,64 @@
           </div>
         </div>
         <div class="content">
-          <div class="left-message">
-            <div class="left">
-              That sounds great. I’d be happy to discuss more.
-            </div>
-            <div class="left">
-              Could you send over some pictures of your dog, please?
+          <div class="left-message-container">
+            <div class="left-message">
+              <div class="left">
+                That sounds great. I’d be happy to discuss more.
+              </div>
+              <div class="left">
+                Could you send over some pictures of your dog, please?
+              </div>
             </div>
           </div>
           
+          <div class="right-message-container">
+            <div class="right-message">
+              <div class="image">
+                <img src="./images/dog-image-1.jpg" alt="dog1">
+                <img src="./images/dog-image-2.jpg" alt="dog2">
+                <img src="./images/dog-image-3.jpg" alt="dog3">
+              </div>
+              <div class="right">
+                Here are a few pictures. She’s a happy girl!
+              </div>
+              <div class="right">
+                Can you make it?
+              </div>
+            </div>
+          </div>
+
+          <div class="left-message-container">
+            <div class="left-message">
+              <div class="left">
+                She looks so happy! The time we discussed works. How long shall I take her out for?
+              </div>
+            </div>
+            <div class="attached">
+              <div class="radio">
+                <input type="radio">
+                <span>30 minute walk</span>
+                <h5>$29</h5>
+              </div>  
+              <div class="radio">
+                <input type="radio">
+                <span>1 hour walk</span>
+                <h5>$49</h5>
+              </div>      
+            </div>
+          </div>
+
+          <div class="send-message">
+            <input type="text" placeholder="Type a message…">
+            <button>
+              <i class="arrow right"></i>
+            </button>
+          </div>
+        
+                
+              
+        
           
-        
-          Here are a few pictures. She’s a happy girl!
-        
-          Can you make it?
-        
-          She looks so happy! The time we discussed works. How long shall I take her out for?
-        
-          30 minute walk
-          $29
-        
-          1 hour walk
-          $49
-        
-          Type a message…
         </div>
       </div>
     </section>
@@ -74,5 +105,6 @@
   </main>
 
   <div class="bg-image"></div>
+  <div class="bg-image-desktop"></div>
 </body>
 </html>
